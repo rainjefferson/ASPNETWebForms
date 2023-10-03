@@ -10,12 +10,17 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label Text="Código" runat="server" />
+            <br />
             <asp:TextBox ID="txtID" runat="server" TextMode="Number" disable="true"/> 
+            <br />
             <asp:Label Text="CNPJ" runat="server" />
+            <br />
             <asp:TextBox ID="txtCNPJ" runat="server" TextMode="Number" />  
             <br />
             <asp:Label Text="Razão Social" runat="server" />
+            <br />
             <asp:TextBox ID="txtRazaoSocial" runat="server" />  
+            <br />
             <br />
             <asp:Button ID="btnCadastrar" Text="Cadastrar" runat="server" OnClick="btnCadastrar_Click" />
             <br />
