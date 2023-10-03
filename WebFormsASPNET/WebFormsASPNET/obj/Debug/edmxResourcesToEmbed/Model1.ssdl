@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="webforms_vsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'webforms_vs.dbo.clientes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="cnpj" />
+      <PropertyRef Name="razao_social" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="cnpj" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="razao_social" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="webforms_vsModelStoreContainer">
+    <EntitySet Name="clientes" EntityType="Self.clientes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [clientes].[id] AS [id], 
+    [clientes].[cnpj] AS [cnpj], 
+    [clientes].[razao_social] AS [razao_social]
+    FROM [dbo].[clientes] AS [clientes]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
